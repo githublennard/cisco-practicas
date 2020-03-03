@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import requests
 import json
 import urllib3
@@ -30,12 +32,14 @@ response_json = resp.json()
 
 #print(response_json)
 
-#libreria para tener una vista mas limpia al capturar datos
+#libreria para tener una vista mas limpia al capturar datos y verlos impreso en pantalla
 #pprint(response_json)
 
-#Aqui se parsea la respuesta, es decir devuelve lo que que te indico en los "[]"
+#Aqui se parsea la respuesta, es decir devuelve lo que que te indico en los "[]", se obtiene un resultado mas exacto
 print("La distancia es:",response_json['route']['distance'],"km")
 
+#Para usar esta opcion se hace un casting, se modifica el tipo de solicitud que se hace
+pprint("La distancia es:" +str( response_json['route']['distance'])+"km")
 
 
 
