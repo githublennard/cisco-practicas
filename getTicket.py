@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+
+#Estos son modulos
 import requests
 import json
 import urllib3
@@ -16,7 +18,7 @@ headers = {
 
     'Content-Type':'application/json'
 }
-
+#Model skin de la peticion
 body_json = {
   "password": "Xj3BDqbU",
   "username": "devnetuser"
