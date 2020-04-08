@@ -14,7 +14,7 @@ La carpeta que contiene las tareas es: entregaTareasDevNet
     * Funcion getTicket
     * Funcion getHosts
     * Funcion getNetworkDevices
-    * Funcion getRoute
+    * Funcion getInterface
     * Funcion getFlowAnalysis
 
 ### Note 

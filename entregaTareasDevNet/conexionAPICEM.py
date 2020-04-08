@@ -69,7 +69,7 @@ After select your operation press Enter
             "MAC: ",interface['macAddress'],"ipV4: ",interface['ipv4Address'])
 
     if operation == '5':
-        getInterface()
+        getFlowAnalysis()
         pprint(response_json)
         
     again()
