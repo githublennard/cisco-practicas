@@ -4,7 +4,7 @@ import requests
 import json
 import urllib3
 from pprint import pprint
-from tabulate import * 
+from tabulate import *
 
 
 requests.packages.urllib3.disable_warnings()
@@ -16,7 +16,7 @@ url= "https://devnetsbx-netacad-apicem-3.cisco.com/api/v1/host"
 headers = {
 
     'Content-Type' : 'application/json',
-    'X-Auth-Token' : 'ST-2087-a9TBeEtCkSrJc5Co1Ynk-cas'
+    'X-Auth-Token' : 'ST-3426-jhuJkMMHsXxaXCJGI7th-cas'
 }
 
 #body_json = {
@@ -37,10 +37,10 @@ headers = {
 resp = requests.get(url,headers=headers,verify=False)
 
 hostList = []
- 
+
 print("La peticion tiene el estado",resp.status_code)
 
-#Esta es una variable que indica que la variable "resp" me la devuelva en formato "json" 
+#Esta es una variable que indica que la variable "resp" me la devuelva en formato "json"
 response_json = resp.json()
 
 #print(response_json)
@@ -53,11 +53,11 @@ for el in response_json['response']:
         #response_json['response']
         el['hostType'],
         el['hostIp'],
-        el['hostMac']   
+        el['hostMac']
     ]
     #append = Nos sirve para indicar que vamos a añadir algo en una variable por eso concatenamos
     hostList.append(host)
-tableHeader = ["Number","Type","IP","MAC"] 
+tableHeader = ["Number","Type","IP","MAC"]
 
 print(tabulate(hostList,tableHeader))
 #libreria para tener una vista mas limpia al capturar datos y verlos impreso en pantalla
@@ -80,4 +80,4 @@ print(tabulate(hostList,tableHeader))
 #    print("El hostname",response_json['response'][counter]['hostname'],"pertenece a la familia",response_json['response'][counter]['family'],
 #    "su MAC es", response_json['response'][counter]['macAddress'],"y su version de IOS es:",response_json['response'][counter]['softwareVersion'])
 #    counter +=1
-###  
+###

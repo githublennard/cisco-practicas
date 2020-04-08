@@ -9,14 +9,20 @@ La carpeta que contiene las tareas es: entregaTareasDevNet
 1. Calculadora
     * Funciones: suma, resta, multiplicación, división, funcion exponencial, razon trigonometrica del seno y coseno, raiz cuadrada.
 
-2. Api Consulta
+2. Programa Python Conexion al Controlador APIC-EM de Cisco
 
-Funciones: suma, resta, multiplicación, división, funcion exponencial, razon trigonometrica del seno y coseno, raiz cuadrada.
+    * Funcion getTicket
+    * Funcion getHosts
+    * Funcion getNetworkDevices
+    * Funcion getRoute
+    * Funcion getFlowAnalysis
+
 ### Note 
 
 Sincronized in:
 
-* /home/lennard/Zoho Docs/Cisco/Git_Cisco/ciscoPracticas
+* /home/lennard/ciscoGit
+
 
  
 

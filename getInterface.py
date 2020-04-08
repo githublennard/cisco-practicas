@@ -8,14 +8,14 @@ from pprint import pprint
 
 requests.packages.urllib3.disable_warnings()
 
-url= "https://devnetsbx-netacad-apicem-3.cisco.com/api/v1/network-device"
+url= "https://devnetsbx-netacad-apicem-3.cisco.com/api/v1/interface"
 
 
 #Estableciendo las cabeceras// Que sea un diccionario
 headers = {
 
     'Content-Type' : 'application/json',
-    'X-Auth-Token' : 'ST-3426-jhuJkMMHsXxaXCJGI7th-cas'
+    'X-Auth-Token' : 'ST-3445-u1SBzV6wc4bbSBMVMhVR-cas'
 }
 
 #body_json = {
@@ -45,6 +45,8 @@ response_json = resp.json()
 
 #libreria para tener una vista mas limpia al capturar datos y verlos impreso en pantalla
 #pprint(response_json)
+#pprint(response_json['response']['interfaceType']) -->> Esta sintaxis no es posible
+
 
 #print("El ticket de servicio es:",response_json['response']['serviceTicket'])
 
@@ -65,7 +67,7 @@ response_json = resp.json()
 #    counter +=1
 ###
 
-#equipo hace el papel de iterador
-for equipo in response_json['response']:
-    print("El hostname",equipo['hostname'],"pertenece a la familia",equipo['family'],
-    "su MAC es",equipo['macAddress'],"y su version de IOS es:",equipo['softwareVersion'])
+#Interface hace el papel de iterador
+for interface in response_json['response']:
+    print("TIPO INTERFACE: ",interface['interfaceType'],"NOMBRE CLASE: ",interface['className'],
+    "MAC: ",interface['macAddress'],"ipV4: ",interface['ipv4Address'])

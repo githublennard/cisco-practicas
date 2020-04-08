@@ -1,4 +1,4 @@
-import math 
+import math
 
 def calculate():
     global operation
@@ -14,42 +14,42 @@ cos for trigonometric ratios of cosine
 exp for to get exponencial
 After select your operation press Enter
 ''')
-    
+
     if operation == '**':
         onevalue()
         sqr = val ** (1/2)
         print(sqr)
-    
+
     if operation == 'sin':
         onevalue()
         print(math.sin(val))
-    
+
     if operation == 'cos':
         onevalue()
         print(math.cos(val))
-    
+
     if operation == 'exp':
         onevalue()
         print(math.exp(val))
-    
+
     #Addition
     if operation == '+':
         twovalue()
         print('{} + {}  = '.format(number_1, number_2))
         print(number_1 + number_2)
-        
+
     # Subtraction
     elif operation =='-':
         twovalue()
         print('{} - {} = '.format(number_1, number_2))
         print(number_1 - number_2)
-        
+
     # Multiplication
     elif operation =='*':
         twovalue()
         print('{} * {} = '.format(number_1, number_2))
         print(number_1 * number_2)
-        
+
     # Division
     elif operation =='/':
         twovalue()
@@ -60,10 +60,10 @@ After select your operation press Enter
             return again()
         print('{} / {} = '.format(number_1, number_2))
         print(result)
-        
+
     again()
 
- 
+
 
 # Define again() function to ask user if they want to use the calculator again
 def again():
@@ -95,7 +95,7 @@ def onevalue():
     val_1 = input('Enter Value: ')
     try:
         val = int(val_1)
-        #val > 0 
+        #val > 0
     except ValueError:
         print("You must enter an integer value.")
         return again()
@@ -105,20 +105,17 @@ def twovalue():
     global number_2
     val_1 = input('Enter Your first Number: ')
     val_2 = input('Enter Your second Number: ')
-    
+
     try:
         val = int(val_1) and int(val_2)
     except ValueError:
         print("You must enter an integer value.")
         return again()
-    
+
     number_1 = int(val_1)
     number_2 = int(val_2)
-    
+
 
 # Call calculate() outside of the function
 welcome()
 calculate()
-
-
-
