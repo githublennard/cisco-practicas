@@ -5,7 +5,7 @@ from netmiko import ConnectHandler
 
 #sshovercli = ConnectHandler(device_type="cisco_ios",host='192.168.56.101', port=22, username='cisco', password='cisco123!' )
 #sshovercli = ConnectHandler(device_type="cisco_ios",host='192.168.254.11', port=22, username='cisco', password='cisco1234!' )
-sshovercli = ConnectHandler(device_type="cisco_ios",host='10.10.20.48', port=22, username='cisco', password='cisco_1234!')
+sshovercli = ConnectHandler(device_type="cisco_ios",host='10.10.20.20', port=22, username='root', password='cisco123')
 output = sshovercli.send_command("show ip interface brief")
 #output = sshovercli.send_command("sh ip int br")
 print("show ip interface brief:\n{}".format(output))
