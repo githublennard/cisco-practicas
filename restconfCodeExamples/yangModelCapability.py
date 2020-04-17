@@ -5,8 +5,9 @@ import json,requests
 
 requests.packages.urllib3.disable_warnings()
 
-#Connection Address
-api_url = "https://10.10.20.48/restconf/data/ietf-interfaces:interfaces/interface=Loopback44"
+
+api_url = "https://10.10.20.48/restconf/data/ietf-restconf-monitoring:restconf-state/capabilities"
+    
 
 #Headers
 headers ={
@@ -21,5 +22,6 @@ basic_auth = ("cisco","cisco_1234!")
 resp = requests.get(api_url,auth=basic_auth, headers=headers ,verify=False)
 
 resp_json = resp.json()
-
 print(json.dumps(resp_json,indent=4))
+
+print("La peticion tiene el estado",resp.status_code)
