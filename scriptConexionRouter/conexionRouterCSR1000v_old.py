@@ -29,7 +29,7 @@ Please Select the function that you need to deploy in Router CSR1000v:
 3 for Delete Interface
 4 for Route Table
 5 for Yang RESTCONF Capability
-6 for Yang Modul 2
+6 for Yang Memory Statistics
 
 After select your operation press Enter
 ''')
